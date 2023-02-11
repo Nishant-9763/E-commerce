@@ -6,7 +6,6 @@ const route=require("./routes/route")
 
 
 app.use(express.json())
-app.use(express.urlencoded({ extended: true }));
 app.use(multer().any())
 
 //error level middleware
@@ -19,16 +18,10 @@ app.use((err, req, res, next) => {
 })
 
 mongoose.set('strictQuery', true)
-mongoose
-  .connect(
-    "mongodb+srv://vintiray:7091201680@cluster0.ahtxrqr.mongodb.net/group10Database",
-    {
-      useNewUrlParser: true,
-    }
-  )
+mongoose.connect("mongodb+srv://TusharJainFunctionup:functionup@tusharjaindb.zxey2fj.mongodb.net/ProductManagement")
 
-  .then(() => console.log("MongoDb is connected"))
-  .catch((err) => console.log(err));
+.then(() => console.log("MongoDb is connected"))
+.catch((err) => console.log(err));
 
 app.use("/",route)
 

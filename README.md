@@ -483,8 +483,3 @@ Refer below sample
   updatedAt: "2021-09-17T04:25:07.803Z",
 }
 ```
-
-//
-cart get,delete======pritam
-cart post update======tushar
-order post, put==========sumit
